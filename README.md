@@ -1,5 +1,12 @@
 # Memory and Storage Performance Profiling
 
+## Tested System
+
+
+## General Memeory Performance Profile 
+
+The following profile was obtained by running the `mlc` commands.
+
 Measuring Idle Latencies (ns)
 | Numa Node | 0 |
 |----|----|
@@ -60,15 +67,14 @@ Measuring cache-to-cache transfer latency (in ns)
 | Local Socket L2->L2 HIT Latency | 12.1 |
 | Local Socket L2->L2 HITM Latency | 19.4 |
 
+## Memory Performance Profiling With 62.5MB Buffers
 
-buffer size for read and write is 62.5MB/sec
-bandwidth
-
+Memory Bandwidth between Nodes in the system(MB/sec)
 | Numa Node | 0 |
 |----|----|
 | 0 | 26992.5 |
 
-Measuring Loaded Latencies for the system (62.5MB/sec)
+Measuring Loaded Latencies for the system
 | Inject Delay | Latency (ns) | Bandwidth (MB/sec) |
 |-----|------|------|
  |00000 | 112.40  |  24844.1|
@@ -90,3 +96,5 @@ Measuring Loaded Latencies for the system (62.5MB/sec)
  |05000 |  48.38  |   1806.6|
  |09000 |  43.14  |   1761.1|
  |20000 |  49.49  |   1416.1|
+ 
+ 
