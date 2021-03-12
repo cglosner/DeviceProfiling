@@ -1,8 +1,8 @@
 # Memory and Storage Performance Profiling
 
 Measuring Idle Latencies (ns)
-|----|----|
 | Numa Node | 0 |
+|----|----|
 | 0 | 37.3 |
 
 
@@ -11,7 +11,8 @@ Using all the threads from each core if Hyper-threading is enabled
 Using traffic with the following read-write ratios
 
 Measuring Peak Injection Memory Bandwidths for the system (MB/sec)
-|----|----|
+|Read/Write Ratios | Bandwidth |
+|-----|-----|
 | ALL Reads | 28547.3 |
 |3:1 Reads-Writes | 25585.4 |
 | 2:1 Reads-Writes | 25077.1 |
@@ -21,8 +22,8 @@ Measuring Peak Injection Memory Bandwidths for the system (MB/sec)
 Using read-only traffic type
 
 Measuring Memory Bandwidths between nodes within system (MB/sec)
-|---|----|
 | Numa Node | 0 |
+|----|----|
 | 0 | 28451.5 |
 
 Using Read-only traffic type
@@ -53,6 +54,39 @@ Measuring Loaded Latencies for the system
 Using small pages for allocating buffers
 
 Measuring cache-to-cache transfer latency (in ns)
-|------|-------|
+
+|Cache-to-Cache | Latency |
+|------|------|
 | Local Socket L2->L2 HIT Latency | 12.1 |
 | Local Socket L2->L2 HITM Latency | 19.4 |
+
+
+buffer size for read and write is 62.5MB/sec
+bandwidth
+
+| Numa Node | 0 |
+|----|----|
+| 0 | 26992.5 |
+
+Measuring Loaded Latencies for the system (62.5MB/sec)
+| Inject Delay | Latency (ns) | Bandwidth (MB/sec) |
+|-----|------|------|
+ |00000 | 112.40  |  24844.1|
+ |00002 |  85.93  |  27544.1|
+ |00008 |  90.74  |  26551.5|
+ |00015 |  82.63  |  26735.9|
+ |00050 |  80.50  |  24604.9|
+ |00100 |  71.33  |  17476.8|
+ |00200 |  57.06  |  11992.2|
+ |00300 |  68.48  |   8018.8|
+ |00400 |  46.48  |   7337.6|
+ |00500 |  51.51  |   5759.2|
+ |00700 |  50.48  |   4551.0|
+ |01000 |  50.65  |   3594.2|
+ |01300 |  45.99  |   3261.2|
+ |01700 |  47.53  |   2783.8|
+ |02500 |  47.85  |   2316.8|
+ |03500 |  47.85  |   2035.8|
+ |05000 |  48.38  |   1806.6|
+ |09000 |  43.14  |   1761.1|
+ |20000 |  49.49  |   1416.1|
