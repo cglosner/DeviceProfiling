@@ -146,15 +146,19 @@ Throughout this section it is broken up by commands used. Below the commands is 
 relevant output. 
 
 256MB for Read only
-`fio --name=latency-profile.fio --iodepth=16 --rw=randread --size=256M --direct=1`
+```
+fio --name=latency-profile.fio --iodepth=16 --rw=randread --size=256M --direct=1
+---------------------------------------
 read: IOPS=74.2k, BW=290MiB/s (304MB/s)(256MiB/883msec)
 lat (usec): min=7, max=327, avg=10.49, stdev= 5.64
 bw (  KiB/s): min=293837, max=293837, per=98.98%, avg=293837.00, stdev= 0.00, samples=1
 iops        : min=73459, max=73459, avg=73459.00, stdev= 0.00, samples=1
-
+```
 
 256MB for Read-Write
-`fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=256M --direct=1`
+```
+fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=256M --direct=1
+------------------------------------------------------
  read: IOPS=37.2k, BW=145MiB/s (152MB/s)(128MiB/881msec)
  lat (usec): min=7, max=253, avg=10.63, stdev= 4.78
  bw (  KiB/s): min=148657, max=148657, per=100.00%, avg=148657.00, stdev= 0.00, samples=1
@@ -164,24 +168,34 @@ iops        : min=73459, max=73459, avg=73459.00, stdev= 0.00, samples=1
 lat (usec): min=7, max=256, avg=10.26, stdev= 4.61
  bw (  KiB/s): min=148767, max=148767, per=99.90%, avg=148767.00, stdev= 0.00, samples=1
    iops        : min=37191, max=37191, avg=37191.00, stdev= 0.00, samples=1
+```
 
-4KB for Read-Write (which only resulted in reading
-`fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=4K --direct=1`
+4KB for Read-Write (which only resulted in reading)
+```
+fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=4K --direct=1
+----------------------------------------------
 read: IOPS=1000, BW=4000KiB/s (4096kB/s)(4096B/1msec)
  lat (nsec): min=71100, max=71100, avg=71100.00, stdev= 0.00
+```
 
 64MB for Read-Write
-`fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=64M --direct=1`
+```
+fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=64M --direct=1
+----------------------------------------------
  read: IOPS=37.8k, BW=148MiB/s (155MB/s)(31.9MiB/216msec)
 lat (nsec): min=7300, max=63100, avg=10334.99, stdev=4020.87
 
 write: IOPS=38.1k, BW=149MiB/s (156MB/s)(32.1MiB/216msec)
 lat (usec): min=7, max=202, avg=10.01, stdev= 4.69
+```
 
 16MB for Read-Write
-`fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=16M --direct=1`
+```
+fio --name=latency-profile.fio --iodepth=4 --rw=randrw --size=16M --direct=1
+-------------------------------------------
 read: IOPS=37.6k, BW=147MiB/s (154MB/s)(7968KiB/53msec)
 lat (nsec): min=7300, max=63600, avg=10051.26, stdev=3888.42
 
  write: IOPS=39.7k, BW=155MiB/s (163MB/s)(8416KiB/53msec)
 lat (nsec): min=7200, max=62300, avg=9675.81, stdev=4105.43
+```
