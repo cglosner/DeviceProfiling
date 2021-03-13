@@ -100,6 +100,8 @@ Measuring Loaded Latencies for the system
  |20000 |  49.49  |   1416.1|
  
  
+ ![Throughput vs. Latency (64MB)](https://github.com/cglosner/DeviceProfiling/64TvL.png)
+ 
 ## Memory Performance Profiling with 256MB Buffer
 
 `mlc --bandwidth_matrix -b256000`
@@ -131,6 +133,11 @@ Measuring Loaded Latencies for the system
  |05000 |   43.15 |    1948.9|
  |09000 |  43.28  |   1738.9|
  |20000 |  53.61  |   1305.5|
+ 
+ ![Throughput vs. Latency(64MB)](https://github.com/cglosner/DeviceProfiling/256TvL.png)
+ 
+ 
+## Memory Profile Analysis
  
 
 ## Storage Profiling 
