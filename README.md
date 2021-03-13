@@ -2,6 +2,11 @@
 
 ## Tested System
 
+Lenovo X1 Laptop
+- OS: Windows 10 Pro
+- RAM: 16GB
+- Processor: Intel i7-8650U @ 1.90GHz/2.11GHz
+- Storage: 500GB SSD
 
 ## General Memeory Performance Profile 
 
@@ -139,7 +144,13 @@ Measuring Loaded Latencies for the system
  
 ## Memory Profile Analysis
  
+Looking at the plots for both 64MB and 256MB buffers, the results were very similar in both cases but it is hard to have a proper comparison.
 
+ ![Throughput vs. Latency](https://github.com/cglosner/DeviceProfiling/blob/main/ComparisonTvL.png)
+
+The plot above includes both the 64MB and 256MB Throughput vs. Latency to give a more comprehensible comparison. As you can see, when the buffer size
+is larger then the latency is lower on average, but in both cases they follow the same trend. The latency decreases as the bandwidth increases, which 
+makes sense because when more data can pass through then the data in the IO queue can be processed faster with a lower latency.
 ## Storage Profiling 
 
 Throughout this section it is broken up by commands used. Below the commands is the associated
