@@ -210,3 +210,12 @@ lat (nsec): min=7300, max=63600, avg=10051.26, stdev=3888.42
  write: IOPS=39.7k, BW=155MiB/s (163MB/s)(8416KiB/53msec)
 lat (nsec): min=7200, max=62300, avg=9675.81, stdev=4105.43
 ```
+
+From the above FIO runs, we can observe that our storage device is nowhere close to the speed of the latest Intel Data CEnter NVMe SSD.
+For example, we have a FIO run of a 4KB read, and its IOPS was 1000. Intel's NVMe SSD has a read-only 4KB IOPS of 400,000.
+This is nowhere close to the same or even similar speed, and we can see that the enterprise grade SSD has far superior performance.
+
+Some more observations are as follows:
+1. As expected, as we increase storage access queue depth, we have a higher resource utilization and throughput. When only reading, we also get a higher bandwidth when compared with reading and writing.
+2. When we do small file size reads or writes (4KB) we see a decrease in bandwidth, latency, and IOPS.
+3. When we do larger file reads or writes, the latency and bandwidth seem to be fairly consistent.
